@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <!--标题栏布局-->
+    <include layout="@layout/include_titlebar"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!--focusable="true"，focusableInTouchMode="true"把布局中默认的行为截断了！-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingTop="4dp" >
+
+    <!--图片轮播，第三方库-->
+    <com.plter.lib.ab.AndroidBanner
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:id="@+id/ab"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_gray" />
+
+    <com.dc.wibome.widget.WrapHeightListView
+        android:id="@+id/lv_user_items"
+        style="@style/ListViewCommon"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" >
+
+    </com.dc.wibome.widget.WrapHeightListView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

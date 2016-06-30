@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--特殊的选择背景-->
+<selector 
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item android:state_checked="true">
+		<!--layer-list 是将多个图片形状混合在一起-->
+		<layer-list>
+		    <!--整个菜单为48dp，在44的位置进行变换颜色-->
+		    <item android:top="44dp">
+		        <!--相当于颜色为橙色的直线-->
+		        <shape android:shape="rectangle" >
+		            <solid android:color="@color/orange" />
+		        </shape>
+		    </item>
+		</layer-list>
+    </item>
+
+	<!--未选中时是透明色-->
+    <item android:drawable="@color/transparent">
+
+	</item>
+
+</selector>

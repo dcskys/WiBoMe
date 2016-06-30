@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--图片所放位置xdpi不同，呈现的效果也不同-->
+    <item android:drawable="@mipmap/tabbar_home_highlighted"
+        android:state_checked="true"/>
+
+    <item android:drawable="@mipmap/tabbar_home"/>
+
+</selector>

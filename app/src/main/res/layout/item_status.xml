@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--此为首页列表具体呈现的布局，设置背景，按下去时颜色发生变化-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_card_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white2gray_sel"
+    android:orientation="vertical" >
+
+     <!--发表微博的人布局，-->
+    <include layout="@layout/include_avatar" />
+
+    <!--android:layout_marginTop="-16dp" 防止间距过大-->
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/TextViewBody"
+        android:layout_width="match_parent"
+        android:text="从前有个人来到了油坊桥,后来他变成了吴彦祖"
+        android:layout_marginTop="-16dp"
+        android:padding="16dp" />
+
+        <!--呈现图片的布局，一张或多张-->
+    <include
+        android:id="@+id/include_status_image"
+        layout="@layout/include_status_image"
+        android:visibility="gone" />
+
+        <!--引用微博的布局-->
+    <include
+        android:id="@+id/include_retweeted_status"
+        layout="@layout/include_retweeted_status"
+        android:visibility="gone" />
+
+        <!--底部操作栏的布局，点赞，评论等-->
+    <include
+        android:id="@+id/ll_bottom_control"
+        layout="@layout/include_status_controlbar" />
+
+</LinearLayout>

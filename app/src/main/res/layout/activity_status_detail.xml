@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--微博详情界面的布局-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <!--头部标题栏的布局，自定义的，不使用actionBar-->
+    <include layout="@layout/include_titlebar" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <!--自定义的继承第三方库的列表-->
+        <com.dc.wibome.widget.Pull2RefreshListView
+            android:id="@+id/plv_status_detail"
+            style="@style/ListViewLineDivider">
+        </com.dc.wibome.widget.Pull2RefreshListView>
+
+         <!--需要悬浮的菜单栏，当滑动到顶部时进行显示，注意和列表菜单栏同步 RadioButton ，转发，评论，赞-->
+        <include
+            android:id="@+id/status_detail_tab"
+            layout="@layout/status_detail_tab"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!--底部评论操作栏的布局-->
+    <include
+        android:id="@+id/status_detail_controlbar"
+        layout="@layout/include_status_controlbar" />
+
+</LinearLayout>

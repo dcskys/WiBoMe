@@ -1,0 +1,147 @@
+<resources>
+
+    <!--封装了一些常用的模板-->
+
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">   <!--主题-->
+
+        <!--无标题和全屏属性 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+    <style name="DialogCommon" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 对话框是否有遮盖 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="TextViewHeadline">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/txt_black</item>
+        <item name="android:textSize">@dimen/txtsize_headline</item>
+    </style>
+   <!--标题类文字-->
+    <style name="TextViewTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/txt_black</item>
+        <item name="android:textSize">@dimen/txtsize_title</item>
+    </style>
+    <!--小标题类文字-->
+    <style name="TextViewSubhead">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/txt_black</item>
+        <item name="android:textSize">@dimen/txtsize_subhead</item>
+    </style>
+    <!--内容文字-->
+    <style name="TextViewBody">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/txt_black</item>
+        <item name="android:textSize">@dimen/txtsize_body</item>
+    </style>
+    <!--提示文字-->
+    <style name="TextViewCaption">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/txt_light_gray</item>
+        <item name="android:textSize">@dimen/txtsize_caption</item>
+    </style>
+    <!--列表属性-->
+    <style name="ListViewCommon">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:listSelector">@color/transparent</item>  <!--无点击颜色-->
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>   <!--没有分割线-->
+        <item name="android:scrollbars">none</item>
+    </style>
+
+
+    <!--微博详情页列表样式-->
+    <style name="ListViewLineDivider" parent="ListViewCommon">
+        <item name="android:divider">@color/divider_gray</item>
+        <item name="android:dividerHeight">1px</item>
+    </style>
+
+    <!--底部标题栏的样式-->
+    <style name="RadioButtonBottomTab">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@drawable/txtcolor_gray2oran_sel</item>
+        <!--设置底部文字切换颜色-->
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/white</item>
+    </style>
+     <!--微博详情页悬浮RadioButton的样式-->
+    <!--使用了特殊的背景，带有颜色的方块-->
+    <style name="RadioButtonStatusDetailTab">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textSize">@dimen/txtsize_subhead</item>
+        <item name="android:textColor">@color/txt_black</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/layerlist_tab_indicator_sel</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="RadioButtonUserInfoTab" parent="RadioButtonStatusDetailTab">
+        <item name="android:background">@color/white</item>
+    </style>
+
+
+    <!--表情button的样式-->
+    <style name="RadioButtonEmotionDashboard">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textSize">@dimen/txtsize_body</item>
+        <item name="android:textColor">@drawable/txtcolor_white2black_sel</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/bg_dgray2white_sel</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+      <!--自定义GridView的样式-->
+    <style name="GridViewImages">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--列数为3列-->
+        <item name="android:numColumns">3</item>
+        <!--设置水平和垂直间距为4-->
+        <item name="android:horizontalSpacing">4dp</item>
+        <item name="android:verticalSpacing">4dp</item>
+        <!--滚动时变化颜色-->
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <!--点击颜色也设为透明-->
+        <item name="android:listSelector">@color/transparent</item>
+        <!--没有滚动条-->
+        <item name="android:scrollbars">none</item>
+    </style>
+
+
+
+
+</resources>

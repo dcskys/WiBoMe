@@ -1,0 +1,3 @@
+include ':app', ':ab'
+include ':library'
+include ':weiboSDK'

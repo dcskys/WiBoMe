@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--引用微博的布局点击时，改变颜色-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_retweet_sel"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_retweeted_content"
+        style="@style/TextViewBody"
+        android:padding="16dp"
+        android:textColor="@color/txt_gray" />
+      <!--引用微博中包含的，图片布局-->
+    <include
+        android:id="@+id/include_status_image"
+        layout="@layout/include_status_image"
+        android:visibility="gone" />
+
+</LinearLayout>
